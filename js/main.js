@@ -11,7 +11,7 @@ const options = {
     <section class="app">
         <app-header></app-header>  
         <router-view class="main-app"></router-view>
-        <app-footer></app-footer>
+        <!-- <app-footer></app-footer> -->
     </section>
     `,
     components: {

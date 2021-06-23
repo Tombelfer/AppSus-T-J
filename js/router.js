@@ -1,18 +1,28 @@
 import bookApp from "./apps/book/pages/book-app.js"
-import homePage from "./apps/book/pages/home-page.js"
-import bookDetails from "./apps/book/cmps/book-details.js"
+import emailApp from "./apps/mail/pages/email-app.js"
+import homePage from "./pages/homepage.js"
+import notesApp from "./apps/keep/pages/notes-app.js"
+
 const routes =[
     {
         path:'/',
         component:homePage
     },
     {
-        path:'/books',
-        component:bookApp
+        path:'/emails',
+        component:emailApp
     },
     {
-        path:'/books/:bookId',
-        component:bookDetails
+        path:'/notes',
+        component: notesApp
     },
+    {
+        path:'/books',
+        component: bookApp
+    },
+    // {
+    //     path:'/books/:bookId',
+    //     component:bookDetails
+    // },
 ]
 export const router = new VueRouter({routes})

@@ -4,12 +4,12 @@ import bookFilter from "../cmps/book-filter.js"
 import bookDetails from "../cmps/book-details.js"
 import { eventBus } from "../services/event-bus-service.js"
 import userMessage from "../cmps/user-message.js"
-
+import appHeader from "/js/apps/book/cmps/appHeader.js"
 export default {
     template: `
     <section class="book-app">
+        <appHeader></appHeader>
     <user-message/>
-
     <book-filter class="main-layout" @filtered="setFilter" />
     <books-list :books="booksToShow" @selected="previewBook"/>
     <book-details :book="selectedBook" v-if="isDetailes"@close="closePreview"/>
@@ -78,6 +78,7 @@ export default {
         }
     },
     components: {
+        appHeader,
         booksList,
         bookFilter,
         bookDetails,

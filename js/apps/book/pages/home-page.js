@@ -4,7 +4,7 @@
           <section class="home-page app-main">
             <div class="texts">
               <div>
-                <h2>Welcome to my books shop</h2>
+                <h2>Welcome to my books sshop</h2>
                 <h3>Here you will find the best books</h3>
                 <button @click="callBus">call the bus</button>
               </div>
