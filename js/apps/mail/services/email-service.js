@@ -59,7 +59,7 @@ function _createEmail(subject,body){
         subject,
         body,
         sentAt:Date.now(),
-        isread:false
+        isread:true
     }
     return email
 }
