@@ -1,17 +1,17 @@
-import { emailService } from "../services/email-service.js"
 
 export default {
     props:["email"],
     template: `
-    <div>
+    <div :class="isRead">
         <p>From: {{email.from}}</p>
-        <p>Subject: {{email.subject}}</p>
+        <p >Subject: {{email.subject}}</p>
     </div>
     `,
-    data(){
-        return{
-            email:this.email
+    computed:{
+        isRead(){
+            if(!this.email.isRead){
+                return 'un-read'
+            }
         }
-    },
-    created
+    }
 }
