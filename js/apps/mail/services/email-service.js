@@ -47,6 +47,7 @@ function getNextCarId(emailId) {
 function _createEmails(){
         const emails=[]
         emails.push((_createEmail('Wassap?','Pick up!')))
+        emails.push((_createEmail('are you?','!')))
         console.log*emails
     return emails
 }
@@ -56,10 +57,11 @@ function _createEmails(){
 function _createEmail(subject,body){
     const email= {
         id:utilService.makeId(),
+        from:'Tom Belfer',
         subject,
         body,
         sentAt:Date.now(),
-        isread:false
+        isRead:false
     }
     return email
 }
