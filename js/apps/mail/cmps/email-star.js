@@ -11,7 +11,6 @@ export default {
     `, data() {
         return {
             emailList: null,
-            emailsTorender:null
         };
     },
     created() {
@@ -19,23 +18,24 @@ export default {
     },
     methods: {
         removeEmail(emailId) {
+            console.log('reomove')
             this.$emit('delete', emailId)
         },
         update(email) {
+            // console.log('read', email.isRead)
             this.$emit('update', email)
         },
         loadEmails() {
             emailService.query()
                 .then((emails) => {
                     this.emailList = emails
-                    console.log(this.emailList[0])
                 })
         }
     },
     computed: {
         toShow(){
             const emailsToShow = this.emails.filter((email)=>{
-                return email.isIncomig
+                return email.isStar
             })
             return emailsToShow
         } 

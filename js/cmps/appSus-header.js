@@ -1,12 +1,16 @@
+import appSusMenu from "./appSus-menu.js"
 export default {
     template: `
-            <header class="app-sus header">
-                <div class="logo"> logo</div>
+            <header class="app-header main-layout flex space-between align-center">
+                <div class="logo">
+                    <router-link to="/" class="logo"><img src="img/apps/klipartz.com.png" alt=""></router-link>
+                </div>
                 <nav class="nav-bar">
-                        <router-link to=""><li>Email</li></router-link>
-                        <router-link to=""><li>Notes</li></router-link>
-                        <router-link to=""><li>Books</li></router-link>
+                        <appSusMenu></appSusMenu>
                 </nav>
             </header>
-    `
+    `,
+    components: {
+        appSusMenu
+    }
 }
